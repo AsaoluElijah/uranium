@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uranium Browser</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Browse like you own the web" />
+    <meta name="author" content="Asaolu Elijah" />
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<nav class="header">
+		<div class="left-header">
+			<!-- Icons -->
+			<a class="head-icon" id="home" title="Home page"><i class="icon-home"></i></a>
+			<a class="head-icon icon-reload" id="reload" title="Refresh Page"></a>
+			<a class="head-icon icon-heart text-danger" title="Add to loved page"></a>
+			<!-- Search input -->
+			<!-- <form id="location-form"> -->
+				<input type="text" id="location" class="search-input" value="async.html">
+			<!-- </form> -->
+			<span class="head-icon-left">
+
+				<!-- Set to display none for mobile -->
+				<span class="arrow">
+					<select class="search-engine" title="Select search engine">
+						<option>
+							<img src="js/img.png">&nbsp;Google <i class="icon-heart"></i>
+						</option>
+						<option>
+							<img src="js/img.png">&nbsp;Bing</option>
+						<option>
+							<img src="js/img.png">&nbsp;Yahoo
+						</option>
+						<option>
+							<img src="js/img.png">&nbsp;Wikipedia
+						</option>
+					</select>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<!-- <img src="js/img.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+					<i class="icon-arrow-left" id="back" title="Goto previous page"></i>
+					<i class="icon-arrow-right" id="forward" title="Goto next page"></i>
+					&nbsp;&nbsp;&nbsp;
+				</span>
+
+				<i class="icon-options-vertical"></i>
+				&nbsp;&nbsp;
+				<span class="dropdown">
+					<i class="icon-menu menu data-toggle" data-toggle="dropdown"></i>
+					<div class="dropdown-menu">
+						<div class="dropdown-header">
+							<i class="icon-settings"></i>
+							&nbsp;&nbsp;Preferences
+						<div class="dropdown-divider"></div>
+						</div>
+						<a class="dropdown-item">
+							<i class="icon-cloud"></i>&nbsp;&nbsp;New tab
+						</a>
+
+						<a class="dropdown-item">
+							<i class="icon-heart text-danger"></i> &nbsp;&nbsp;Favourites
+						</a>
+
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item">
+							<i class="icon-settings text-info"></i>&nbsp;&nbsp;Settings
+						</a>
+
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item">
+							<i class="icon-print"></i>&nbsp;&nbsp;Print page
+						</a>
+
+						<a class="dropdown-item">
+							<i class="icon-cookies"></i>&nbsp;&nbsp;Manage cookies
+						</a>
+
+						<a class="dropdown-item">
+							<i class="icon-cloud"></i>&nbsp;&nbsp;Goodies
+						</a>
+
+						<a class="dropdown-item devTool">
+							<i class="icon-code"></i>&nbsp;&nbsp;Developers tool
+						</a>
+					</div>
+				</span>
+				<!-- <i class="icon-menu menu"></i> -->
+			</span>
+		</div>
+		<hr class="top-hr">
+	</nav>
+	<!-- Sticky Share button -->
+	<nav class="sticky-share">
+
+		<a href="#" class="buttons facebook" title="Share on facebook"><i class="icon-social-facebook"></i></a>
+		<a href="#" class="buttons twitter" title="Share on twitter"><i class="icon-social-twitter"></i></a>
+		<a href="#" class="buttons google+" title="Share on google+"><i class="icon-social-reddit"></i></a>
+
+		<a class="buttons"><i class="icon-share"></i></a>
+	</nav>
+	<!-- Sticky Share button ends-->
+
+	<!-- Sticky Search button -->
+	<nav class="sticky-search">
+		<input type="search">
+		<i class="icon-magnifier"></i>
+		<div class="sticky-search-result">
+			
+		</div>
+		<a class="buttons"><i class="icon-magnifier"></i></a>
+	</nav>
+	<!-- Sticky Search button ends-->
+	<div class="result">
+		<webview id="foo" src="file:///C:/Users/unique/Desktop/_webview_%20Tag%20_%20Electron.html" httpreferrer="http://uranium.org" useragent="Uranium Browser/1.2 Chromiun Engine" style="width:860px; height:580px"></webview>
+	</div>
+
+	<script src="index.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+</body>
+</html>

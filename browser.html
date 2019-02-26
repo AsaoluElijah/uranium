@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Browse like you own the web" />
+    <meta name="author" content="Asaolu Elijah" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="browser.css">
+    <link href="simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tab contents -->
+<!--     <link href="tab/demo/css/demo.css" rel="stylesheet">
+    <link href="tab/css/chrome-tabs.css" rel="stylesheet">
+    <link href="tab/css/chrome-tabs-dark-theme.css" rel="stylesheet"> -->
+
+<body>
+
+        <!-- Tab area 
+            **Tab suspended** -->
+        <!-- Tab area ends -->
+   
+    <div id="controls">
+        <button id="home" title="Go Home"></button>
+        <button id="reload" title="Reload"></button>
+        <button id="favouriteAdd" title="Add to favourite pages"></button>
+        &nbsp;&nbsp;
+        <button id="back" title="Go Back" disabled="true"></button>
+        <button id="forward" title="Go Forward" disabled="true"></button>
+
+        <form id="location-form">
+            <div id="center-column">
+              <input id="location" type="text" value="http://localhost/connect">
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit">
+                <i id="searchIcon"></i>
+            </button>
+
+        </form>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="addons"></button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="preference"></button>
+        &nbsp;&nbsp;
+        <button id="zoom" title="Change Zoom">&#128270;</button>
+        <button id="find" title="Find in Page">&#128294;</button>
+    </div>
+
+    <div id="zoom-box">
+        <form id="zoom-form">
+            <input id="zoom-text" type="text">
+            <input type="submit" value="&#128270;">
+            <button id="zoom-in">&#10133;</button>
+            <button id="zoom-out">&#10134;</button>
+        </form>
+    </div>
+
+    <div id="find-box">
+        <form id="find-form">
+            <input id="find-text" type="text">
+            <div id="find-results"></div>
+            <input type="submit" style="position:absolute; visibility:hidden">
+            <button id="match-case">aA</button>
+            <button id="find-backward">&#60;</button>
+            <button id="find-forward">&#62;</button>
+       </form>
+    </div>
+
+    <webview src="file:///C:/Users/unique/Desktop/_webview_%20Tag%20_%20Electron.html" httpreferrer="http://uranium.org" useragent="Uranium Browser/1.2 Chromiun Engine" style="width:640px; height:480px"></webview>
+
+    <div id="sad-webview">
+      <div id="sad-webview-icon">&#9762;</div>
+      <h2 id="crashed-label">Aw, Snap!</h2>
+      <h2 id="killed-label">He's Dead, Jim!</h2>
+
+      <p>Something went wrong while displaying this webpage.
+      To continue, reload or go to another page.</p>
+    </div>
+
+    <script src="js/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script src="js/popper.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+    <script src="browser.js"></script>
+
+</body>
+</html>

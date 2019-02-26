@@ -1,0 +1,152 @@
+/*
+@font-face {
+    font-family: "Helvetica-Regular";
+    src: url('../fonts/Helvetica-Regular.otf');
+}
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url('../fonts/Montserrat-Light.otf');
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url('../fonts/Montserrat-SemiBold.otf');
+}*/
+
+/*************************************
+*************** General **************
+*************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: none !important;
+}
+
+body {
+  font-family: "Montserrat-Regular", sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.header{
+	position: fixed;
+	width: 100%;
+	background: #fff !important;
+	margin-top: 6px;
+}
+.left-header{
+}
+.head-icon{
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	margin-left: 10px;
+	color: #495057;
+}
+.head-icon-left{
+	float: right;
+	margin-right: 22px;
+}
+.head-icon:hover{
+	font-size: 21px;
+}
+.search-input{
+	-webkit-flex: 1;
+	-webkit-rtl-ordering: logical;
+    cursor: text;
+	margin-left: 20px;
+	border: 0;
+	outline: 0;
+	font-size: 14px;
+	width: 300px;
+	border-left: 1px solid #cbcbcb;
+}
+.top-hr{
+	margin-top: 4px !important;
+}
+select{
+	border: 0;
+	outline: 0;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+}
+
+/*====Sticky Share Button====*/
+.sticky-share{
+	bottom: 0;
+	position: fixed;
+	margin: 1em;
+	left: 0px;
+}
+.buttons{
+	box-shadow: 0px 0px 11px -2px rgba(0,0,0,0,18),
+	0px 4px 12px -7px rgba(0,0,0,0,15);
+	border-radius: 50px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	text-decoration: none !important;
+	font-size: 25px;
+	margin: 20px auto 0;
+	position: relative;
+	-webkit-transition: all .1s ease-out;
+			transition: all .1s ease-out;
+}
+.buttons:active,
+.buttons:focus,
+.buttons:hover{
+	box-shadow: 0 0 4px rgba(0,0,0,.14),
+		0 4px 8px rgba(0,0,0,.28);
+}
+.buttons:not(:last-child){
+	width: 40px;
+	height: 40px;
+	margin: 20px auto 0;
+	opacity: 0;
+	-webkit-transform: translateY(50px);
+	-moz-transform: translateY(50px);
+		transform: translateY(50px);
+}
+.sticky-share:hover
+.buttons:not(:last-child){
+	opacity: 1;
+	transform: none;
+	margin: 15px auto 0;
+
+}
+.buttons:nth-last-child(1){
+
+	transition-delay: 25ms;
+	background-color: #00ccff;
+	background-size: contain; 
+}
+.button:not(:last-child):nth-last-child(1) {
+
+	transition-delay: 20ms;
+	background-color: red;
+	background-size: contain; 
+}
+
+/*====Sticky Share Button Ends====*/
+.sticky-search{
+	bottom: 0;
+	position: fixed;
+	margin: 1em;
+	right: 0px;
+}
+.sticky-search input{
+	border-top:0;
+	border-left:0;
+
+	outline: 0;
+	border-bottom: 1px #000;
+}
+.sticky-search-result
+/*Result Area*/
+.result{
+	margin-top: 20px;
+}
